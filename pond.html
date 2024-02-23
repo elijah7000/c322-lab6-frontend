@@ -46,20 +46,14 @@
     </style>
   </head>
   <body>
-    <div id="pond">
-
-     
-
-    </div>
-    
+    <div id="pond"></div>
 
     <script>
-       let host = "http://localhost:8080";
+      let host = "https://lab6-latest-8fdh.onrender.com/";
       let ducks = [];
       displayTheDucks();
 
       async function getAll() {
-       
         let response = await fetch(host + "/ducks");
         let result = await response.json();
         return result;
@@ -91,7 +85,7 @@
                </div>
             </div>
             `;
-          div.innerHTML = innerHtml;  
+          div.innerHTML = innerHtml;
           pond.appendChild(div);
         }
       }
